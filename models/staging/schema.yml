@@ -1,0 +1,20 @@
+version: 2
+models:
+  - name: stg_loans
+    description: "Cleaned loan-level records with derived risk bands and target"
+    columns:
+      - name: loan_id
+        tests: [unique, not_null]
+      - name: is_default
+        tests:
+          - not_null
+          - accepted_values: {values: [0, 1]}
+      - name: meets_credit_policy
+        tests:
+          - accepted_values: {values: [0, 1]}
+      - name: fico_band
+        tests:
+          - accepted_values: {values: ['<660','660-699','700-739','740+']}
+      - name: interest_rate
+        tests:
+          - not_null

@@ -1,0 +1,3 @@
+policy_status,loans,defaults,default_rate_pct,avg_fico,avg_rate_pct
+Passed policy,7710,1014,13.2,717.0,11.88
+Failed policy,1868,519,27.8,684.0,13.87

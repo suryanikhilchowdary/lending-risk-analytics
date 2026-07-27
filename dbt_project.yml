@@ -1,0 +1,21 @@
+name: 'lending_risk_analytics'
+version: '1.0.0'
+config-version: 2
+
+profile: 'lending_risk_analytics'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+analysis-paths: ["analyses"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  lending_risk_analytics:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

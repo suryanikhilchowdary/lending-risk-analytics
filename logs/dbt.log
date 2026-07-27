@@ -1,0 +1,811 @@
+[0m18:18:06.943700 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B28E7E2FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B28E7B9B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B28E668D50>]}
+
+
+============================== 18:18:06.949247 | b1dc7de5-0380-424f-ab64-255ee15cff5b ==============================
+[0m18:18:06.949247 [info ] [MainThread]: Running with dbt=1.12.0
+[0m18:18:06.949247 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'N:\\practice\\lending_risk_analytics_2', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run', 'log_path': 'N:\\practice\\lending_risk_analytics_2\\logs'}
+[0m18:18:07.130211 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b1dc7de5-0380-424f-ab64-255ee15cff5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B28E86E550>]}
+[0m18:18:07.178538 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b1dc7de5-0380-424f-ab64-255ee15cff5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B289AA5910>]}
+[0m18:18:07.178538 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m18:18:07.351760 [debug] [MainThread]: checksum: 26663b266564f0f6ee5eb4ab3ff567ded5fd593c31007fac9463f6bbf5341719, vars: {}, profile: lending_risk_analytics, target: dev, version: 1.12.0
+[0m18:18:07.351760 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m18:18:07.351760 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'b1dc7de5-0380-424f-ab64-255ee15cff5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B28E85C110>]}
+[0m18:18:08.398322 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on 'stg_loans' in
+package 'lending_risk_analytics' (models\staging\schema.yml). Arguments to
+generic tests should be nested under the `arguments` property.
+[0m18:18:08.400061 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'b1dc7de5-0380-424f-ab64-255ee15cff5b', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B2900FC990>]}
+[0m18:18:08.558680 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b1dc7de5-0380-424f-ab64-255ee15cff5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B2904AF690>]}
+[0m18:18:08.641972 [debug] [MainThread]: Wrote artifact WritableManifest to N:\practice\lending_risk_analytics_2\target\manifest.json
+[0m18:18:08.645022 [debug] [MainThread]: Wrote artifact SemanticManifest to N:\practice\lending_risk_analytics_2\target\semantic_manifest.json
+[0m18:18:08.668074 [debug] [MainThread]: Wrote artifact OsiDocument to N:\practice\lending_risk_analytics_2\target\osi_document.json
+[0m18:18:08.676371 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b1dc7de5-0380-424f-ab64-255ee15cff5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B29046D050>]}
+[0m18:18:08.676371 [info ] [MainThread]: Found 4 models, 7 data tests, 1 source, 486 macros
+[0m18:18:08.676371 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b1dc7de5-0380-424f-ab64-255ee15cff5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B29049F790>]}
+[0m18:18:08.676371 [info ] [MainThread]: 
+[0m18:18:08.676371 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m18:18:08.676371 [info ] [MainThread]: 
+[0m18:18:08.676371 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m18:18:08.687872 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_lending'
+[0m18:18:08.738755 [debug] [ThreadPool]: Using duckdb connection "list_lending"
+[0m18:18:08.738755 [debug] [ThreadPool]: On list_lending: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "lending_risk_analytics", "target_name": "dev", "connection_name": "list_lending"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"lending"'
+    
+  
+  
+[0m18:18:08.738755 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:18:08.763629 [debug] [ThreadPool]: SQL status: OK in 0.026 seconds
+[0m18:18:08.763629 [debug] [ThreadPool]: On list_lending: Close
+[0m18:18:08.763629 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lending, now create_lending_main)
+[0m18:18:08.763629 [debug] [ThreadPool]: Creating schema "database: "lending"
+schema: "main"
+"
+[0m18:18:08.770674 [debug] [ThreadPool]: Using duckdb connection "create_lending_main"
+[0m18:18:08.770674 [debug] [ThreadPool]: On create_lending_main: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "lending_risk_analytics", "target_name": "dev", "connection_name": "create_lending_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='lending'
+        and type='sqlite'
+    
+  
+[0m18:18:08.770674 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:18:08.770674 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:18:08.770674 [debug] [ThreadPool]: Using duckdb connection "create_lending_main"
+[0m18:18:08.770674 [debug] [ThreadPool]: On create_lending_main: BEGIN
+[0m18:18:08.770674 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m18:18:08.770674 [debug] [ThreadPool]: Using duckdb connection "create_lending_main"
+[0m18:18:08.770674 [debug] [ThreadPool]: On create_lending_main: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "lending_risk_analytics", "target_name": "dev", "connection_name": "create_lending_main"} */
+
+    
+    
+        create schema if not exists "lending"."main"
+    
+[0m18:18:08.770674 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m18:18:08.770674 [debug] [ThreadPool]: On create_lending_main: COMMIT
+[0m18:18:08.770674 [debug] [ThreadPool]: Using duckdb connection "create_lending_main"
+[0m18:18:08.770674 [debug] [ThreadPool]: On create_lending_main: COMMIT
+[0m18:18:08.770674 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m18:18:08.779456 [debug] [ThreadPool]: On create_lending_main: Close
+[0m18:18:08.780626 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_lending_main'
+[0m18:18:08.780626 [debug] [ThreadPool]: Using duckdb connection "list_lending_main"
+[0m18:18:08.780626 [debug] [ThreadPool]: On list_lending_main: BEGIN
+[0m18:18:08.780626 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:18:08.780626 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:18:08.780626 [debug] [ThreadPool]: Using duckdb connection "list_lending_main"
+[0m18:18:08.780626 [debug] [ThreadPool]: On list_lending_main: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "lending_risk_analytics", "target_name": "dev", "connection_name": "list_lending_main"} */
+select
+      'lending' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'lending'
+  
+[0m18:18:08.780626 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m18:18:08.780626 [debug] [ThreadPool]: On list_lending_main: ROLLBACK
+[0m18:18:08.790848 [debug] [ThreadPool]: Failed to rollback 'list_lending_main'
+[0m18:18:08.790848 [debug] [ThreadPool]: On list_lending_main: Close
+[0m18:18:08.790848 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b1dc7de5-0380-424f-ab64-255ee15cff5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B28E7E3950>]}
+[0m18:18:08.790848 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:18:08.790848 [debug] [MainThread]: On master: BEGIN
+[0m18:18:08.790848 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:18:08.790848 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:18:08.790848 [debug] [MainThread]: On master: COMMIT
+[0m18:18:08.790848 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:18:08.790848 [debug] [MainThread]: On master: COMMIT
+[0m18:18:08.790848 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:18:08.795399 [debug] [MainThread]: On master: Close
+[0m18:18:08.795399 [debug] [Thread-1 (]: Began running node model.lending_risk_analytics.stg_loans
+[0m18:18:08.795399 [info ] [Thread-1 (]: 1 of 4 START sql view model main.stg_loans ..................................... [RUN]
+[0m18:18:08.795399 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.lending_risk_analytics.stg_loans'
+[0m18:18:08.795399 [debug] [Thread-1 (]: Began compiling node model.lending_risk_analytics.stg_loans
+[0m18:18:08.795399 [debug] [Thread-1 (]: Writing injected SQL for node "model.lending_risk_analytics.stg_loans"
+[0m18:18:08.795399 [debug] [Thread-1 (]: Began executing node model.lending_risk_analytics.stg_loans
+[0m18:18:08.821833 [debug] [Thread-1 (]: Writing runtime sql for node "model.lending_risk_analytics.stg_loans"
+[0m18:18:08.828080 [debug] [Thread-1 (]: Using duckdb connection "model.lending_risk_analytics.stg_loans"
+[0m18:18:08.829250 [debug] [Thread-1 (]: On model.lending_risk_analytics.stg_loans: BEGIN
+[0m18:18:08.829250 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:18:08.830155 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:18:08.830155 [debug] [Thread-1 (]: Using duckdb connection "model.lending_risk_analytics.stg_loans"
+[0m18:18:08.830155 [debug] [Thread-1 (]: On model.lending_risk_analytics.stg_loans: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "lending_risk_analytics", "target_name": "dev", "node_id": "model.lending_risk_analytics.stg_loans"} */
+
+  
+  create view "lending"."main"."stg_loans__dbt_tmp" as (
+    -- Clean & enrich the raw LendingClub loans.
+-- Renames dotted columns, derives target + risk bands used downstream.
+with source as (
+    select * from "lending"."raw"."loans"
+)
+select
+    row_number() over ()                        as loan_id,
+    "credit.policy"                             as meets_credit_policy,   -- 1 = passed LC underwriting
+    purpose,
+    "int.rate"                                  as interest_rate,
+    installment,
+    "log.annual.inc"                            as log_annual_income,
+    round(exp("log.annual.inc"), 0)             as annual_income,          -- back out actual $
+    dti,
+    fico,
+    case
+        when fico < 660 then '<660'
+        when fico < 700 then '660-699'
+        when fico < 740 then '700-739'
+        else '740+'
+    end                                          as fico_band,
+    "days.with.cr.line"                         as days_with_credit_line,
+    "revol.bal"                                 as revolving_balance,
+    "revol.util"                                as revolving_utilization,
+    "inq.last.6mths"                            as inquiries_6mo,
+    "delinq.2yrs"                               as delinquencies_2yr,
+    "pub.rec"                                   as public_records,
+    "not.fully.paid"                            as is_default            -- 1 = not fully paid (loss proxy)
+from source
+  );
+
+[0m18:18:08.833240 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:18:08.836347 [debug] [Thread-1 (]: Using duckdb connection "model.lending_risk_analytics.stg_loans"
+[0m18:18:08.838431 [debug] [Thread-1 (]: On model.lending_risk_analytics.stg_loans: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "lending_risk_analytics", "target_name": "dev", "node_id": "model.lending_risk_analytics.stg_loans"} */
+alter view "lending"."main"."stg_loans__dbt_tmp" rename to "stg_loans"
+[0m18:18:08.838431 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:18:08.838431 [debug] [Thread-1 (]: On model.lending_risk_analytics.stg_loans: COMMIT
+[0m18:18:08.847793 [debug] [Thread-1 (]: Using duckdb connection "model.lending_risk_analytics.stg_loans"
+[0m18:18:08.847793 [debug] [Thread-1 (]: On model.lending_risk_analytics.stg_loans: COMMIT
+[0m18:18:08.872117 [debug] [Thread-1 (]: SQL status: OK in 0.024 seconds
+[0m18:18:08.876331 [debug] [Thread-1 (]: Using duckdb connection "model.lending_risk_analytics.stg_loans"
+[0m18:18:08.876331 [debug] [Thread-1 (]: On model.lending_risk_analytics.stg_loans: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "lending_risk_analytics", "target_name": "dev", "node_id": "model.lending_risk_analytics.stg_loans"} */
+
+      drop view if exists "lending"."main"."stg_loans__dbt_backup" cascade
+    
+[0m18:18:08.876331 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:18:08.878338 [debug] [Thread-1 (]: On model.lending_risk_analytics.stg_loans: Close
+[0m18:18:08.881323 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b1dc7de5-0380-424f-ab64-255ee15cff5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B290899C90>]}
+[0m18:18:08.881323 [info ] [Thread-1 (]: 1 of 4 OK created sql view model main.stg_loans ................................ [[32mOK[0m in 0.08s]
+[0m18:18:08.882671 [debug] [Thread-1 (]: Finished running node model.lending_risk_analytics.stg_loans
+[0m18:18:08.882671 [debug] [Thread-3 (]: Began running node model.lending_risk_analytics.mart_credit_policy
+[0m18:18:08.882671 [debug] [Thread-4 (]: Began running node model.lending_risk_analytics.mart_default_by_segment
+[0m18:18:08.884792 [debug] [Thread-2 (]: Began running node model.lending_risk_analytics.mart_rate_vs_risk
+[0m18:18:08.884792 [info ] [Thread-3 (]: 2 of 4 START sql table model main.mart_credit_policy ........................... [RUN]
+[0m18:18:08.884792 [info ] [Thread-4 (]: 3 of 4 START sql table model main.mart_default_by_segment ...................... [RUN]
+[0m18:18:08.884792 [info ] [Thread-2 (]: 4 of 4 START sql table model main.mart_rate_vs_risk ............................ [RUN]
+[0m18:18:08.884792 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.lending_risk_analytics.mart_credit_policy'
+[0m18:18:08.884792 [debug] [Thread-4 (]: Acquiring new duckdb connection 'model.lending_risk_analytics.mart_default_by_segment'
+[0m18:18:08.884792 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.lending_risk_analytics.mart_rate_vs_risk'
+[0m18:18:08.884792 [debug] [Thread-3 (]: Began compiling node model.lending_risk_analytics.mart_credit_policy
+[0m18:18:08.884792 [debug] [Thread-4 (]: Began compiling node model.lending_risk_analytics.mart_default_by_segment
+[0m18:18:08.888372 [debug] [Thread-2 (]: Began compiling node model.lending_risk_analytics.mart_rate_vs_risk
+[0m18:18:08.888372 [debug] [Thread-3 (]: Writing injected SQL for node "model.lending_risk_analytics.mart_credit_policy"
+[0m18:18:08.890378 [debug] [Thread-4 (]: Writing injected SQL for node "model.lending_risk_analytics.mart_default_by_segment"
+[0m18:18:08.892054 [debug] [Thread-2 (]: Writing injected SQL for node "model.lending_risk_analytics.mart_rate_vs_risk"
+[0m18:18:08.892054 [debug] [Thread-3 (]: Began executing node model.lending_risk_analytics.mart_credit_policy
+[0m18:18:08.909004 [debug] [Thread-3 (]: Writing runtime sql for node "model.lending_risk_analytics.mart_credit_policy"
+[0m18:18:08.909004 [debug] [Thread-4 (]: Began executing node model.lending_risk_analytics.mart_default_by_segment
+[0m18:18:08.909004 [debug] [Thread-2 (]: Began executing node model.lending_risk_analytics.mart_rate_vs_risk
+[0m18:18:08.912058 [debug] [Thread-4 (]: Writing runtime sql for node "model.lending_risk_analytics.mart_default_by_segment"
+[0m18:18:08.914042 [debug] [Thread-2 (]: Writing runtime sql for node "model.lending_risk_analytics.mart_rate_vs_risk"
+[0m18:18:08.914042 [debug] [Thread-3 (]: Using duckdb connection "model.lending_risk_analytics.mart_credit_policy"
+[0m18:18:08.917057 [debug] [Thread-4 (]: Using duckdb connection "model.lending_risk_analytics.mart_default_by_segment"
+[0m18:18:08.917057 [debug] [Thread-3 (]: On model.lending_risk_analytics.mart_credit_policy: BEGIN
+[0m18:18:08.917976 [debug] [Thread-4 (]: On model.lending_risk_analytics.mart_default_by_segment: BEGIN
+[0m18:18:08.917976 [debug] [Thread-2 (]: Using duckdb connection "model.lending_risk_analytics.mart_rate_vs_risk"
+[0m18:18:08.917976 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m18:18:08.917976 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m18:18:08.917976 [debug] [Thread-2 (]: On model.lending_risk_analytics.mart_rate_vs_risk: BEGIN
+[0m18:18:08.919983 [debug] [Thread-3 (]: SQL status: OK in 0.002 seconds
+[0m18:18:08.919983 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m18:18:08.919983 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m18:18:08.919983 [debug] [Thread-3 (]: Using duckdb connection "model.lending_risk_analytics.mart_credit_policy"
+[0m18:18:08.919983 [debug] [Thread-4 (]: Using duckdb connection "model.lending_risk_analytics.mart_default_by_segment"
+[0m18:18:08.922053 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m18:18:08.922053 [debug] [Thread-3 (]: On model.lending_risk_analytics.mart_credit_policy: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "lending_risk_analytics", "target_name": "dev", "node_id": "model.lending_risk_analytics.mart_credit_policy"} */
+
+  
+    
+    
+
+    create  table
+      "lending"."main"."mart_credit_policy__dbt_tmp"
+  
+    as (
+      -- Q4: How well does LendingClub's credit policy screen out risk?
+select
+    case when meets_credit_policy = 1 then 'Passed policy' else 'Failed policy' end as policy_status,
+    count(*)                                        as loans,
+    sum(is_default)                                 as defaults,
+    round(100.0 * sum(is_default) / count(*), 1)    as default_rate_pct,
+    round(avg(fico), 0)                             as avg_fico,
+    round(avg(interest_rate) * 100, 2)              as avg_rate_pct
+from "lending"."main"."stg_loans"
+group by 1
+    );
+  
+  
+[0m18:18:08.922053 [debug] [Thread-4 (]: On model.lending_risk_analytics.mart_default_by_segment: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "lending_risk_analytics", "target_name": "dev", "node_id": "model.lending_risk_analytics.mart_default_by_segment"} */
+
+  
+    
+    
+
+    create  table
+      "lending"."main"."mart_default_by_segment__dbt_tmp"
+  
+    as (
+      -- Q1: What drives default? Default rate by purpose and FICO band.
+select
+    purpose,
+    fico_band,
+    count(*)                                       as loans,
+    sum(is_default)                                as defaults,
+    round(100.0 * sum(is_default) / count(*), 1)   as default_rate_pct,
+    round(avg(interest_rate) * 100, 2)             as avg_rate_pct,
+    round(avg(dti), 1)                             as avg_dti,
+    round(avg(revolving_utilization), 1)           as avg_revol_util
+from "lending"."main"."stg_loans"
+group by purpose, fico_band
+    );
+  
+  
+[0m18:18:08.922053 [debug] [Thread-2 (]: Using duckdb connection "model.lending_risk_analytics.mart_rate_vs_risk"
+[0m18:18:08.922053 [debug] [Thread-2 (]: On model.lending_risk_analytics.mart_rate_vs_risk: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "lending_risk_analytics", "target_name": "dev", "node_id": "model.lending_risk_analytics.mart_rate_vs_risk"} */
+
+  
+    
+    
+
+    create  table
+      "lending"."main"."mart_rate_vs_risk__dbt_tmp"
+  
+    as (
+      -- Q2: Are segments priced for their risk? Compare rate charged to realized default.
+-- risk_gap > 0 flags segments where default outpaces what the rate spread covers.
+select
+    fico_band,
+    count(*)                                        as loans,
+    round(avg(interest_rate) * 100, 2)              as avg_rate_pct,
+    round(100.0 * sum(is_default) / count(*), 1)    as default_rate_pct,
+    round(100.0 * sum(is_default) / count(*)
+          - avg(interest_rate) * 100, 1)            as risk_minus_rate_pct
+from "lending"."main"."stg_loans"
+group by fico_band
+order by fico_band
+    );
+  
+  
+[0m18:18:08.926719 [debug] [Thread-3 (]: SQL status: OK in 0.004 seconds
+[0m18:18:08.927724 [debug] [Thread-4 (]: SQL status: OK in 0.004 seconds
+[0m18:18:08.928530 [debug] [Thread-2 (]: SQL status: OK in 0.004 seconds
+[0m18:18:08.930080 [debug] [Thread-3 (]: Using duckdb connection "model.lending_risk_analytics.mart_credit_policy"
+[0m18:18:08.932618 [debug] [Thread-4 (]: Using duckdb connection "model.lending_risk_analytics.mart_default_by_segment"
+[0m18:18:08.932618 [debug] [Thread-2 (]: Using duckdb connection "model.lending_risk_analytics.mart_rate_vs_risk"
+[0m18:18:08.932618 [debug] [Thread-3 (]: On model.lending_risk_analytics.mart_credit_policy: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "lending_risk_analytics", "target_name": "dev", "node_id": "model.lending_risk_analytics.mart_credit_policy"} */
+alter table "lending"."main"."mart_credit_policy__dbt_tmp" rename to "mart_credit_policy"
+[0m18:18:08.934624 [debug] [Thread-4 (]: On model.lending_risk_analytics.mart_default_by_segment: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "lending_risk_analytics", "target_name": "dev", "node_id": "model.lending_risk_analytics.mart_default_by_segment"} */
+alter table "lending"."main"."mart_default_by_segment__dbt_tmp" rename to "mart_default_by_segment"
+[0m18:18:08.934624 [debug] [Thread-2 (]: On model.lending_risk_analytics.mart_rate_vs_risk: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "lending_risk_analytics", "target_name": "dev", "node_id": "model.lending_risk_analytics.mart_rate_vs_risk"} */
+alter table "lending"."main"."mart_rate_vs_risk__dbt_tmp" rename to "mart_rate_vs_risk"
+[0m18:18:08.934624 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m18:18:08.936141 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m18:18:08.936141 [debug] [Thread-3 (]: On model.lending_risk_analytics.mart_credit_policy: COMMIT
+[0m18:18:08.940186 [debug] [Thread-2 (]: SQL status: OK in 0.004 seconds
+[0m18:18:08.940893 [debug] [Thread-4 (]: On model.lending_risk_analytics.mart_default_by_segment: COMMIT
+[0m18:18:08.940893 [debug] [Thread-3 (]: Using duckdb connection "model.lending_risk_analytics.mart_credit_policy"
+[0m18:18:08.940893 [debug] [Thread-2 (]: On model.lending_risk_analytics.mart_rate_vs_risk: COMMIT
+[0m18:18:08.943926 [debug] [Thread-4 (]: Using duckdb connection "model.lending_risk_analytics.mart_default_by_segment"
+[0m18:18:08.943926 [debug] [Thread-3 (]: On model.lending_risk_analytics.mart_credit_policy: COMMIT
+[0m18:18:08.943926 [debug] [Thread-2 (]: Using duckdb connection "model.lending_risk_analytics.mart_rate_vs_risk"
+[0m18:18:08.943926 [debug] [Thread-4 (]: On model.lending_risk_analytics.mart_default_by_segment: COMMIT
+[0m18:18:08.943926 [debug] [Thread-2 (]: On model.lending_risk_analytics.mart_rate_vs_risk: COMMIT
+[0m18:18:08.943926 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m18:18:08.946784 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m18:18:08.946784 [debug] [Thread-3 (]: Using duckdb connection "model.lending_risk_analytics.mart_credit_policy"
+[0m18:18:08.946784 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m18:18:08.949369 [debug] [Thread-4 (]: Using duckdb connection "model.lending_risk_analytics.mart_default_by_segment"
+[0m18:18:08.949369 [debug] [Thread-3 (]: On model.lending_risk_analytics.mart_credit_policy: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "lending_risk_analytics", "target_name": "dev", "node_id": "model.lending_risk_analytics.mart_credit_policy"} */
+
+      drop table if exists "lending"."main"."mart_credit_policy__dbt_backup" cascade
+    
+[0m18:18:08.949369 [debug] [Thread-2 (]: Using duckdb connection "model.lending_risk_analytics.mart_rate_vs_risk"
+[0m18:18:08.951376 [debug] [Thread-4 (]: On model.lending_risk_analytics.mart_default_by_segment: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "lending_risk_analytics", "target_name": "dev", "node_id": "model.lending_risk_analytics.mart_default_by_segment"} */
+
+      drop table if exists "lending"."main"."mart_default_by_segment__dbt_backup" cascade
+    
+[0m18:18:08.951376 [debug] [Thread-2 (]: On model.lending_risk_analytics.mart_rate_vs_risk: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "lending_risk_analytics", "target_name": "dev", "node_id": "model.lending_risk_analytics.mart_rate_vs_risk"} */
+
+      drop table if exists "lending"."main"."mart_rate_vs_risk__dbt_backup" cascade
+    
+[0m18:18:08.952381 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m18:18:08.952381 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m18:18:08.952381 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m18:18:08.954139 [debug] [Thread-3 (]: On model.lending_risk_analytics.mart_credit_policy: Close
+[0m18:18:08.954139 [debug] [Thread-4 (]: On model.lending_risk_analytics.mart_default_by_segment: Close
+[0m18:18:08.954139 [debug] [Thread-2 (]: On model.lending_risk_analytics.mart_rate_vs_risk: Close
+[0m18:18:08.956146 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b1dc7de5-0380-424f-ab64-255ee15cff5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B29050C290>]}
+[0m18:18:08.956146 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b1dc7de5-0380-424f-ab64-255ee15cff5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B290462810>]}
+[0m18:18:08.956146 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b1dc7de5-0380-424f-ab64-255ee15cff5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B290831910>]}
+[0m18:18:08.956146 [info ] [Thread-3 (]: 2 of 4 OK created sql table model main.mart_credit_policy ...................... [[32mOK[0m in 0.07s]
+[0m18:18:08.956146 [info ] [Thread-4 (]: 3 of 4 OK created sql table model main.mart_default_by_segment ................. [[32mOK[0m in 0.07s]
+[0m18:18:08.956146 [debug] [Thread-3 (]: Finished running node model.lending_risk_analytics.mart_credit_policy
+[0m18:18:08.956146 [info ] [Thread-2 (]: 4 of 4 OK created sql table model main.mart_rate_vs_risk ....................... [[32mOK[0m in 0.07s]
+[0m18:18:08.956146 [debug] [Thread-4 (]: Finished running node model.lending_risk_analytics.mart_default_by_segment
+[0m18:18:08.960631 [debug] [Thread-2 (]: Finished running node model.lending_risk_analytics.mart_rate_vs_risk
+[0m18:18:08.960631 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:18:08.960631 [debug] [MainThread]: On master: BEGIN
+[0m18:18:08.960631 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:18:08.960631 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m18:18:08.960631 [debug] [MainThread]: On master: COMMIT
+[0m18:18:08.960631 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:18:08.960631 [debug] [MainThread]: On master: COMMIT
+[0m18:18:08.960631 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:18:08.965611 [debug] [MainThread]: On master: Close
+[0m18:18:08.966143 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:18:08.966143 [debug] [MainThread]: Connection 'create_lending_main' was properly closed.
+[0m18:18:08.966143 [debug] [MainThread]: Connection 'list_lending_main' was properly closed.
+[0m18:18:08.966143 [debug] [MainThread]: Connection 'model.lending_risk_analytics.stg_loans' was properly closed.
+[0m18:18:08.966143 [debug] [MainThread]: Connection 'model.lending_risk_analytics.mart_credit_policy' was properly closed.
+[0m18:18:08.966143 [debug] [MainThread]: Connection 'model.lending_risk_analytics.mart_default_by_segment' was properly closed.
+[0m18:18:08.968654 [debug] [MainThread]: Connection 'model.lending_risk_analytics.mart_rate_vs_risk' was properly closed.
+[0m18:18:08.968654 [info ] [MainThread]: 
+[0m18:18:08.968654 [info ] [MainThread]: Finished running 3 table models, 1 view model in 0 hours 0 minutes and 0.29 seconds (0.29s).
+[0m18:18:08.970663 [debug] [MainThread]: Command end result
+[0m18:18:09.010429 [debug] [MainThread]: Wrote artifact WritableManifest to N:\practice\lending_risk_analytics_2\target\manifest.json
+[0m18:18:09.019680 [debug] [MainThread]: Wrote artifact SemanticManifest to N:\practice\lending_risk_analytics_2\target\semantic_manifest.json
+[0m18:18:09.021687 [debug] [MainThread]: Wrote artifact OsiDocument to N:\practice\lending_risk_analytics_2\target\osi_document.json
+[0m18:18:09.027673 [debug] [MainThread]: Wrote artifact RunExecutionResult to N:\practice\lending_risk_analytics_2\target\run_results.json
+[0m18:18:09.029678 [info ] [MainThread]: 
+[0m18:18:09.029678 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:18:09.029678 [info ] [MainThread]: 
+[0m18:18:09.029678 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=4
+[0m18:18:09.029678 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 3 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m18:18:09.029678 [debug] [MainThread]: Command `dbt run` succeeded at 18:18:09.029678 after 2.23 seconds
+[0m18:18:09.035865 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B28E71E7D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B28E62E0D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B290259310>]}
+[0m18:18:09.035865 [debug] [MainThread]: Flushing usage events
+[0m18:18:09.631962 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:19:01.679757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291DDC3750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291DE8C290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291DD05990>]}
+
+
+============================== 18:19:01.679757 | 6b2da0fe-8336-4b31-8f18-de9574baf059 ==============================
+[0m18:19:01.679757 [info ] [MainThread]: Running with dbt=1.12.0
+[0m18:19:01.679757 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'N:\\practice\\lending_risk_analytics_2', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt test', 'log_path': 'N:\\practice\\lending_risk_analytics_2\\logs'}
+[0m18:19:02.084336 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6b2da0fe-8336-4b31-8f18-de9574baf059', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291DF1BD90>]}
+[0m18:19:02.187766 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6b2da0fe-8336-4b31-8f18-de9574baf059', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229191A1650>]}
+[0m18:19:02.193464 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m18:19:02.736419 [debug] [MainThread]: checksum: 26663b266564f0f6ee5eb4ab3ff567ded5fd593c31007fac9463f6bbf5341719, vars: {}, profile: lending_risk_analytics, target: dev, version: 1.12.0
+[0m18:19:03.031348 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:19:03.031348 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m18:19:03.031348 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:19:03.054308 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6b2da0fe-8336-4b31-8f18-de9574baf059', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291E0AB650>]}
+[0m18:19:03.261121 [debug] [MainThread]: Wrote artifact WritableManifest to N:\practice\lending_risk_analytics_2\target\manifest.json
+[0m18:19:03.261121 [debug] [MainThread]: Wrote artifact SemanticManifest to N:\practice\lending_risk_analytics_2\target\semantic_manifest.json
+[0m18:19:03.325281 [debug] [MainThread]: Wrote artifact OsiDocument to N:\practice\lending_risk_analytics_2\target\osi_document.json
+[0m18:19:03.362497 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6b2da0fe-8336-4b31-8f18-de9574baf059', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291E151810>]}
+[0m18:19:03.364520 [info ] [MainThread]: Found 4 models, 7 data tests, 1 source, 486 macros
+[0m18:19:03.368567 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6b2da0fe-8336-4b31-8f18-de9574baf059', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291DF5FA50>]}
+[0m18:19:03.370594 [info ] [MainThread]: 
+[0m18:19:03.372617 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m18:19:03.374637 [info ] [MainThread]: 
+[0m18:19:03.389188 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m18:19:03.396989 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_lending_main'
+[0m18:19:03.528490 [debug] [ThreadPool]: Using duckdb connection "list_lending_main"
+[0m18:19:03.531379 [debug] [ThreadPool]: On list_lending_main: BEGIN
+[0m18:19:03.532351 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:19:03.560856 [debug] [ThreadPool]: SQL status: OK in 0.037 seconds
+[0m18:19:03.560856 [debug] [ThreadPool]: Using duckdb connection "list_lending_main"
+[0m18:19:03.560856 [debug] [ThreadPool]: On list_lending_main: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "lending_risk_analytics", "target_name": "dev", "connection_name": "list_lending_main"} */
+select
+      'lending' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'lending'
+  
+[0m18:19:03.578956 [debug] [ThreadPool]: SQL status: OK in 0.007 seconds
+[0m18:19:03.578956 [debug] [ThreadPool]: On list_lending_main: ROLLBACK
+[0m18:19:03.578956 [debug] [ThreadPool]: Failed to rollback 'list_lending_main'
+[0m18:19:03.578956 [debug] [ThreadPool]: On list_lending_main: Close
+[0m18:19:03.578956 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6b2da0fe-8336-4b31-8f18-de9574baf059', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291C3DC890>]}
+[0m18:19:03.578956 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:19:03.578956 [debug] [MainThread]: On master: BEGIN
+[0m18:19:03.578956 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:19:03.578956 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m18:19:03.591837 [debug] [MainThread]: On master: COMMIT
+[0m18:19:03.593001 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:19:03.593001 [debug] [MainThread]: On master: COMMIT
+[0m18:19:03.593001 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:19:03.595056 [debug] [MainThread]: On master: Close
+[0m18:19:03.600105 [debug] [Thread-1 (]: Began running node test.lending_risk_analytics.accepted_values_stg_loans_fico_band___660__660_699__700_739__740_.631e9f2da3
+[0m18:19:03.600105 [debug] [Thread-2 (]: Began running node test.lending_risk_analytics.accepted_values_stg_loans_is_default__0__1.46a31fcddd
+[0m18:19:03.600105 [debug] [Thread-3 (]: Began running node test.lending_risk_analytics.accepted_values_stg_loans_meets_credit_policy__0__1.b7f17eba5a
+[0m18:19:03.600105 [debug] [Thread-4 (]: Began running node test.lending_risk_analytics.not_null_stg_loans_interest_rate.eebdca6d15
+[0m18:19:03.604837 [info ] [Thread-1 (]: 1 of 7 START test accepted_values_stg_loans_fico_band___660__660_699__700_739__740_  [RUN]
+[0m18:19:03.604837 [info ] [Thread-2 (]: 2 of 7 START test accepted_values_stg_loans_is_default__0__1 ................... [RUN]
+[0m18:19:03.608548 [debug] [Thread-1 (]: Acquiring new duckdb connection 'test.lending_risk_analytics.accepted_values_stg_loans_fico_band___660__660_699__700_739__740_.631e9f2da3'
+[0m18:19:03.604837 [info ] [Thread-3 (]: 3 of 7 START test accepted_values_stg_loans_meets_credit_policy__0__1 .......... [RUN]
+[0m18:19:03.608548 [debug] [Thread-2 (]: Acquiring new duckdb connection 'test.lending_risk_analytics.accepted_values_stg_loans_is_default__0__1.46a31fcddd'
+[0m18:19:03.617408 [debug] [Thread-2 (]: Began compiling node test.lending_risk_analytics.accepted_values_stg_loans_is_default__0__1.46a31fcddd
+[0m18:19:03.607612 [info ] [Thread-4 (]: 4 of 7 START test not_null_stg_loans_interest_rate ............................. [RUN]
+[0m18:19:03.608548 [debug] [Thread-1 (]: Began compiling node test.lending_risk_analytics.accepted_values_stg_loans_fico_band___660__660_699__700_739__740_.631e9f2da3
+[0m18:19:03.613365 [debug] [Thread-3 (]: Acquiring new duckdb connection 'test.lending_risk_analytics.accepted_values_stg_loans_meets_credit_policy__0__1.b7f17eba5a'
+[0m18:19:03.647729 [debug] [Thread-2 (]: Writing injected SQL for node "test.lending_risk_analytics.accepted_values_stg_loans_is_default__0__1.46a31fcddd"
+[0m18:19:03.648408 [debug] [Thread-4 (]: Acquiring new duckdb connection 'test.lending_risk_analytics.not_null_stg_loans_interest_rate.eebdca6d15'
+[0m18:19:03.671909 [debug] [Thread-1 (]: Writing injected SQL for node "test.lending_risk_analytics.accepted_values_stg_loans_fico_band___660__660_699__700_739__740_.631e9f2da3"
+[0m18:19:03.671909 [debug] [Thread-3 (]: Began compiling node test.lending_risk_analytics.accepted_values_stg_loans_meets_credit_policy__0__1.b7f17eba5a
+[0m18:19:03.671909 [debug] [Thread-4 (]: Began compiling node test.lending_risk_analytics.not_null_stg_loans_interest_rate.eebdca6d15
+[0m18:19:03.680264 [debug] [Thread-3 (]: Writing injected SQL for node "test.lending_risk_analytics.accepted_values_stg_loans_meets_credit_policy__0__1.b7f17eba5a"
+[0m18:19:03.680264 [debug] [Thread-1 (]: Began executing node test.lending_risk_analytics.accepted_values_stg_loans_fico_band___660__660_699__700_739__740_.631e9f2da3
+[0m18:19:03.680264 [debug] [Thread-2 (]: Began executing node test.lending_risk_analytics.accepted_values_stg_loans_is_default__0__1.46a31fcddd
+[0m18:19:03.698201 [debug] [Thread-4 (]: Writing injected SQL for node "test.lending_risk_analytics.not_null_stg_loans_interest_rate.eebdca6d15"
+[0m18:19:03.711968 [debug] [Thread-3 (]: Began executing node test.lending_risk_analytics.accepted_values_stg_loans_meets_credit_policy__0__1.b7f17eba5a
+[0m18:19:03.720018 [debug] [Thread-2 (]: Writing runtime sql for node "test.lending_risk_analytics.accepted_values_stg_loans_is_default__0__1.46a31fcddd"
+[0m18:19:03.722029 [debug] [Thread-1 (]: Writing runtime sql for node "test.lending_risk_analytics.accepted_values_stg_loans_fico_band___660__660_699__700_739__740_.631e9f2da3"
+[0m18:19:03.727683 [debug] [Thread-3 (]: Writing runtime sql for node "test.lending_risk_analytics.accepted_values_stg_loans_meets_credit_policy__0__1.b7f17eba5a"
+[0m18:19:03.730431 [debug] [Thread-1 (]: Using duckdb connection "test.lending_risk_analytics.accepted_values_stg_loans_fico_band___660__660_699__700_739__740_.631e9f2da3"
+[0m18:19:03.730431 [debug] [Thread-2 (]: Using duckdb connection "test.lending_risk_analytics.accepted_values_stg_loans_is_default__0__1.46a31fcddd"
+[0m18:19:03.731977 [debug] [Thread-1 (]: On test.lending_risk_analytics.accepted_values_stg_loans_fico_band___660__660_699__700_739__740_.631e9f2da3: BEGIN
+[0m18:19:03.731977 [debug] [Thread-3 (]: Using duckdb connection "test.lending_risk_analytics.accepted_values_stg_loans_meets_credit_policy__0__1.b7f17eba5a"
+[0m18:19:03.733524 [debug] [Thread-2 (]: On test.lending_risk_analytics.accepted_values_stg_loans_is_default__0__1.46a31fcddd: BEGIN
+[0m18:19:03.735076 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:19:03.735076 [debug] [Thread-3 (]: On test.lending_risk_analytics.accepted_values_stg_loans_meets_credit_policy__0__1.b7f17eba5a: BEGIN
+[0m18:19:03.736608 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m18:19:03.738152 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:19:03.738152 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m18:19:03.739689 [debug] [Thread-2 (]: SQL status: OK in 0.003 seconds
+[0m18:19:03.739689 [debug] [Thread-1 (]: Using duckdb connection "test.lending_risk_analytics.accepted_values_stg_loans_fico_band___660__660_699__700_739__740_.631e9f2da3"
+[0m18:19:03.741280 [debug] [Thread-3 (]: SQL status: OK in 0.003 seconds
+[0m18:19:03.742348 [debug] [Thread-2 (]: Using duckdb connection "test.lending_risk_analytics.accepted_values_stg_loans_is_default__0__1.46a31fcddd"
+[0m18:19:03.742348 [debug] [Thread-1 (]: On test.lending_risk_analytics.accepted_values_stg_loans_fico_band___660__660_699__700_739__740_.631e9f2da3: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "lending_risk_analytics", "target_name": "dev", "node_id": "test.lending_risk_analytics.accepted_values_stg_loans_fico_band___660__660_699__700_739__740_.631e9f2da3"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        fico_band as value_field,
+        count(*) as n_records
+
+    from "lending"."main"."stg_loans"
+    group by fico_band
+
+)
+
+select *
+from all_values
+where value_field not in (
+    '<660','660-699','700-739','740+'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:19:03.743880 [debug] [Thread-3 (]: Using duckdb connection "test.lending_risk_analytics.accepted_values_stg_loans_meets_credit_policy__0__1.b7f17eba5a"
+[0m18:19:03.744676 [debug] [Thread-2 (]: On test.lending_risk_analytics.accepted_values_stg_loans_is_default__0__1.46a31fcddd: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "lending_risk_analytics", "target_name": "dev", "node_id": "test.lending_risk_analytics.accepted_values_stg_loans_is_default__0__1.46a31fcddd"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        is_default as value_field,
+        count(*) as n_records
+
+    from "lending"."main"."stg_loans"
+    group by is_default
+
+)
+
+select *
+from all_values
+where value_field not in (
+    '0','1'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:19:03.746734 [debug] [Thread-3 (]: On test.lending_risk_analytics.accepted_values_stg_loans_meets_credit_policy__0__1.b7f17eba5a: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "lending_risk_analytics", "target_name": "dev", "node_id": "test.lending_risk_analytics.accepted_values_stg_loans_meets_credit_policy__0__1.b7f17eba5a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        meets_credit_policy as value_field,
+        count(*) as n_records
+
+    from "lending"."main"."stg_loans"
+    group by meets_credit_policy
+
+)
+
+select *
+from all_values
+where value_field not in (
+    '0','1'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:19:03.748282 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m18:19:03.750302 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m18:19:03.751005 [debug] [Thread-3 (]: SQL status: OK in 0.003 seconds
+[0m18:19:03.751005 [debug] [Thread-2 (]: On test.lending_risk_analytics.accepted_values_stg_loans_is_default__0__1.46a31fcddd: ROLLBACK
+[0m18:19:03.751005 [debug] [Thread-4 (]: Began executing node test.lending_risk_analytics.not_null_stg_loans_interest_rate.eebdca6d15
+[0m18:19:03.759625 [debug] [Thread-1 (]: On test.lending_risk_analytics.accepted_values_stg_loans_fico_band___660__660_699__700_739__740_.631e9f2da3: ROLLBACK
+[0m18:19:03.762648 [debug] [Thread-3 (]: On test.lending_risk_analytics.accepted_values_stg_loans_meets_credit_policy__0__1.b7f17eba5a: ROLLBACK
+[0m18:19:03.762648 [debug] [Thread-2 (]: Failed to rollback 'test.lending_risk_analytics.accepted_values_stg_loans_is_default__0__1.46a31fcddd'
+[0m18:19:03.762648 [debug] [Thread-4 (]: Writing runtime sql for node "test.lending_risk_analytics.not_null_stg_loans_interest_rate.eebdca6d15"
+[0m18:19:03.762648 [debug] [Thread-1 (]: Failed to rollback 'test.lending_risk_analytics.accepted_values_stg_loans_fico_band___660__660_699__700_739__740_.631e9f2da3'
+[0m18:19:03.762648 [debug] [Thread-3 (]: Failed to rollback 'test.lending_risk_analytics.accepted_values_stg_loans_meets_credit_policy__0__1.b7f17eba5a'
+[0m18:19:03.762648 [debug] [Thread-2 (]: On test.lending_risk_analytics.accepted_values_stg_loans_is_default__0__1.46a31fcddd: Close
+[0m18:19:03.762648 [debug] [Thread-1 (]: On test.lending_risk_analytics.accepted_values_stg_loans_fico_band___660__660_699__700_739__740_.631e9f2da3: Close
+[0m18:19:03.762648 [debug] [Thread-3 (]: On test.lending_risk_analytics.accepted_values_stg_loans_meets_credit_policy__0__1.b7f17eba5a: Close
+[0m18:19:03.772200 [debug] [Thread-4 (]: Using duckdb connection "test.lending_risk_analytics.not_null_stg_loans_interest_rate.eebdca6d15"
+[0m18:19:03.772200 [info ] [Thread-2 (]: 2 of 7 PASS accepted_values_stg_loans_is_default__0__1 ......................... [[32mPASS[0m in 0.16s]
+[0m18:19:03.774213 [info ] [Thread-1 (]: 1 of 7 PASS accepted_values_stg_loans_fico_band___660__660_699__700_739__740_ .. [[32mPASS[0m in 0.17s]
+[0m18:19:03.775724 [info ] [Thread-3 (]: 3 of 7 PASS accepted_values_stg_loans_meets_credit_policy__0__1 ................ [[32mPASS[0m in 0.16s]
+[0m18:19:03.775724 [debug] [Thread-4 (]: On test.lending_risk_analytics.not_null_stg_loans_interest_rate.eebdca6d15: BEGIN
+[0m18:19:03.775724 [debug] [Thread-2 (]: Finished running node test.lending_risk_analytics.accepted_values_stg_loans_is_default__0__1.46a31fcddd
+[0m18:19:03.775724 [debug] [Thread-1 (]: Finished running node test.lending_risk_analytics.accepted_values_stg_loans_fico_band___660__660_699__700_739__740_.631e9f2da3
+[0m18:19:03.775724 [debug] [Thread-3 (]: Finished running node test.lending_risk_analytics.accepted_values_stg_loans_meets_credit_policy__0__1.b7f17eba5a
+[0m18:19:03.775724 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m18:19:03.781585 [debug] [Thread-2 (]: Began running node test.lending_risk_analytics.not_null_stg_loans_is_default.26a18f466a
+[0m18:19:03.781585 [debug] [Thread-1 (]: Began running node test.lending_risk_analytics.not_null_stg_loans_loan_id.b77c69982c
+[0m18:19:03.781585 [debug] [Thread-3 (]: Began running node test.lending_risk_analytics.unique_stg_loans_loan_id.be67636b63
+[0m18:19:03.781585 [debug] [Thread-4 (]: SQL status: OK in 0.004 seconds
+[0m18:19:03.781585 [info ] [Thread-2 (]: 5 of 7 START test not_null_stg_loans_is_default ................................ [RUN]
+[0m18:19:03.789533 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.lending_risk_analytics.accepted_values_stg_loans_is_default__0__1.46a31fcddd, now test.lending_risk_analytics.not_null_stg_loans_is_default.26a18f466a)
+[0m18:19:03.791615 [debug] [Thread-2 (]: Began compiling node test.lending_risk_analytics.not_null_stg_loans_is_default.26a18f466a
+[0m18:19:03.781585 [info ] [Thread-1 (]: 6 of 7 START test not_null_stg_loans_loan_id ................................... [RUN]
+[0m18:19:03.788132 [debug] [Thread-4 (]: Using duckdb connection "test.lending_risk_analytics.not_null_stg_loans_interest_rate.eebdca6d15"
+[0m18:19:03.803090 [debug] [Thread-2 (]: Writing injected SQL for node "test.lending_risk_analytics.not_null_stg_loans_is_default.26a18f466a"
+[0m18:19:03.787710 [info ] [Thread-3 (]: 7 of 7 START test unique_stg_loans_loan_id ..................................... [RUN]
+[0m18:19:03.805111 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lending_risk_analytics.accepted_values_stg_loans_fico_band___660__660_699__700_739__740_.631e9f2da3, now test.lending_risk_analytics.not_null_stg_loans_loan_id.b77c69982c)
+[0m18:19:03.805111 [debug] [Thread-4 (]: On test.lending_risk_analytics.not_null_stg_loans_interest_rate.eebdca6d15: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "lending_risk_analytics", "target_name": "dev", "node_id": "test.lending_risk_analytics.not_null_stg_loans_interest_rate.eebdca6d15"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select interest_rate
+from "lending"."main"."stg_loans"
+where interest_rate is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:19:03.809140 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.lending_risk_analytics.accepted_values_stg_loans_meets_credit_policy__0__1.b7f17eba5a, now test.lending_risk_analytics.unique_stg_loans_loan_id.be67636b63)
+[0m18:19:03.810288 [debug] [Thread-1 (]: Began compiling node test.lending_risk_analytics.not_null_stg_loans_loan_id.b77c69982c
+[0m18:19:03.811177 [debug] [Thread-2 (]: Began executing node test.lending_risk_analytics.not_null_stg_loans_is_default.26a18f466a
+[0m18:19:03.814770 [debug] [Thread-3 (]: Began compiling node test.lending_risk_analytics.unique_stg_loans_loan_id.be67636b63
+[0m18:19:03.816271 [debug] [Thread-4 (]: SQL status: OK in 0.003 seconds
+[0m18:19:03.825805 [debug] [Thread-1 (]: Writing injected SQL for node "test.lending_risk_analytics.not_null_stg_loans_loan_id.b77c69982c"
+[0m18:19:03.830785 [debug] [Thread-2 (]: Writing runtime sql for node "test.lending_risk_analytics.not_null_stg_loans_is_default.26a18f466a"
+[0m18:19:03.834158 [debug] [Thread-3 (]: Writing injected SQL for node "test.lending_risk_analytics.unique_stg_loans_loan_id.be67636b63"
+[0m18:19:03.834158 [debug] [Thread-4 (]: On test.lending_risk_analytics.not_null_stg_loans_interest_rate.eebdca6d15: ROLLBACK
+[0m18:19:03.849256 [debug] [Thread-1 (]: Began executing node test.lending_risk_analytics.not_null_stg_loans_loan_id.b77c69982c
+[0m18:19:03.849256 [debug] [Thread-2 (]: Using duckdb connection "test.lending_risk_analytics.not_null_stg_loans_is_default.26a18f466a"
+[0m18:19:03.849256 [debug] [Thread-4 (]: Failed to rollback 'test.lending_risk_analytics.not_null_stg_loans_interest_rate.eebdca6d15'
+[0m18:19:03.849256 [debug] [Thread-3 (]: Began executing node test.lending_risk_analytics.unique_stg_loans_loan_id.be67636b63
+[0m18:19:03.853705 [debug] [Thread-1 (]: Writing runtime sql for node "test.lending_risk_analytics.not_null_stg_loans_loan_id.b77c69982c"
+[0m18:19:03.855716 [debug] [Thread-2 (]: On test.lending_risk_analytics.not_null_stg_loans_is_default.26a18f466a: BEGIN
+[0m18:19:03.855716 [debug] [Thread-4 (]: On test.lending_risk_analytics.not_null_stg_loans_interest_rate.eebdca6d15: Close
+[0m18:19:03.858504 [debug] [Thread-3 (]: Writing runtime sql for node "test.lending_risk_analytics.unique_stg_loans_loan_id.be67636b63"
+[0m18:19:03.858504 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m18:19:03.862083 [debug] [Thread-1 (]: Using duckdb connection "test.lending_risk_analytics.not_null_stg_loans_loan_id.b77c69982c"
+[0m18:19:03.863464 [info ] [Thread-4 (]: 4 of 7 PASS not_null_stg_loans_interest_rate ................................... [[32mPASS[0m in 0.22s]
+[0m18:19:03.863464 [debug] [Thread-3 (]: Using duckdb connection "test.lending_risk_analytics.unique_stg_loans_loan_id.be67636b63"
+[0m18:19:03.863464 [debug] [Thread-2 (]: SQL status: OK in 0.006 seconds
+[0m18:19:03.863464 [debug] [Thread-1 (]: On test.lending_risk_analytics.not_null_stg_loans_loan_id.b77c69982c: BEGIN
+[0m18:19:03.863464 [debug] [Thread-4 (]: Finished running node test.lending_risk_analytics.not_null_stg_loans_interest_rate.eebdca6d15
+[0m18:19:03.863464 [debug] [Thread-3 (]: On test.lending_risk_analytics.unique_stg_loans_loan_id.be67636b63: BEGIN
+[0m18:19:03.870250 [debug] [Thread-2 (]: Using duckdb connection "test.lending_risk_analytics.not_null_stg_loans_is_default.26a18f466a"
+[0m18:19:03.870250 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:19:03.872261 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m18:19:03.872261 [debug] [Thread-2 (]: On test.lending_risk_analytics.not_null_stg_loans_is_default.26a18f466a: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "lending_risk_analytics", "target_name": "dev", "node_id": "test.lending_risk_analytics.not_null_stg_loans_is_default.26a18f466a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select is_default
+from "lending"."main"."stg_loans"
+where is_default is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:19:03.873888 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m18:19:03.873888 [debug] [Thread-3 (]: SQL status: OK in 0.004 seconds
+[0m18:19:03.873888 [debug] [Thread-1 (]: Using duckdb connection "test.lending_risk_analytics.not_null_stg_loans_loan_id.b77c69982c"
+[0m18:19:03.873888 [debug] [Thread-3 (]: Using duckdb connection "test.lending_risk_analytics.unique_stg_loans_loan_id.be67636b63"
+[0m18:19:03.878585 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m18:19:03.878585 [debug] [Thread-1 (]: On test.lending_risk_analytics.not_null_stg_loans_loan_id.b77c69982c: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "lending_risk_analytics", "target_name": "dev", "node_id": "test.lending_risk_analytics.not_null_stg_loans_loan_id.b77c69982c"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select loan_id
+from "lending"."main"."stg_loans"
+where loan_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:19:03.881085 [debug] [Thread-3 (]: On test.lending_risk_analytics.unique_stg_loans_loan_id.be67636b63: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "lending_risk_analytics", "target_name": "dev", "node_id": "test.lending_risk_analytics.unique_stg_loans_loan_id.be67636b63"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    loan_id as unique_field,
+    count(*) as n_records
+
+from "lending"."main"."stg_loans"
+where loan_id is not null
+group by loan_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:19:03.883099 [debug] [Thread-2 (]: On test.lending_risk_analytics.not_null_stg_loans_is_default.26a18f466a: ROLLBACK
+[0m18:19:03.886839 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:19:03.886839 [debug] [Thread-2 (]: Failed to rollback 'test.lending_risk_analytics.not_null_stg_loans_is_default.26a18f466a'
+[0m18:19:03.892078 [debug] [Thread-1 (]: On test.lending_risk_analytics.not_null_stg_loans_loan_id.b77c69982c: ROLLBACK
+[0m18:19:03.892078 [debug] [Thread-3 (]: SQL status: OK in 0.007 seconds
+[0m18:19:03.892078 [debug] [Thread-2 (]: On test.lending_risk_analytics.not_null_stg_loans_is_default.26a18f466a: Close
+[0m18:19:03.894445 [debug] [Thread-1 (]: Failed to rollback 'test.lending_risk_analytics.not_null_stg_loans_loan_id.b77c69982c'
+[0m18:19:03.897363 [debug] [Thread-3 (]: On test.lending_risk_analytics.unique_stg_loans_loan_id.be67636b63: ROLLBACK
+[0m18:19:03.897363 [info ] [Thread-2 (]: 5 of 7 PASS not_null_stg_loans_is_default ...................................... [[32mPASS[0m in 0.11s]
+[0m18:19:03.897363 [debug] [Thread-1 (]: On test.lending_risk_analytics.not_null_stg_loans_loan_id.b77c69982c: Close
+[0m18:19:03.897363 [debug] [Thread-3 (]: Failed to rollback 'test.lending_risk_analytics.unique_stg_loans_loan_id.be67636b63'
+[0m18:19:03.897363 [debug] [Thread-2 (]: Finished running node test.lending_risk_analytics.not_null_stg_loans_is_default.26a18f466a
+[0m18:19:03.904105 [info ] [Thread-1 (]: 6 of 7 PASS not_null_stg_loans_loan_id ......................................... [[32mPASS[0m in 0.09s]
+[0m18:19:03.904105 [debug] [Thread-3 (]: On test.lending_risk_analytics.unique_stg_loans_loan_id.be67636b63: Close
+[0m18:19:03.905117 [debug] [Thread-1 (]: Finished running node test.lending_risk_analytics.not_null_stg_loans_loan_id.b77c69982c
+[0m18:19:03.905117 [info ] [Thread-3 (]: 7 of 7 PASS unique_stg_loans_loan_id ........................................... [[32mPASS[0m in 0.10s]
+[0m18:19:03.905117 [debug] [Thread-3 (]: Finished running node test.lending_risk_analytics.unique_stg_loans_loan_id.be67636b63
+[0m18:19:03.909598 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:19:03.909598 [debug] [MainThread]: On master: BEGIN
+[0m18:19:03.909598 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:19:03.916224 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m18:19:03.916224 [debug] [MainThread]: On master: COMMIT
+[0m18:19:03.917982 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:19:03.917982 [debug] [MainThread]: On master: COMMIT
+[0m18:19:03.921113 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:19:03.921113 [debug] [MainThread]: On master: Close
+[0m18:19:03.921113 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:19:03.923731 [debug] [MainThread]: Connection 'list_lending_main' was properly closed.
+[0m18:19:03.923731 [debug] [MainThread]: Connection 'test.lending_risk_analytics.not_null_stg_loans_loan_id.b77c69982c' was properly closed.
+[0m18:19:03.923731 [debug] [MainThread]: Connection 'test.lending_risk_analytics.not_null_stg_loans_is_default.26a18f466a' was properly closed.
+[0m18:19:03.925744 [debug] [MainThread]: Connection 'test.lending_risk_analytics.unique_stg_loans_loan_id.be67636b63' was properly closed.
+[0m18:19:03.925744 [debug] [MainThread]: Connection 'test.lending_risk_analytics.not_null_stg_loans_interest_rate.eebdca6d15' was properly closed.
+[0m18:19:03.925744 [info ] [MainThread]: 
+[0m18:19:03.925744 [info ] [MainThread]: Finished running 7 data tests in 0 hours 0 minutes and 0.54 seconds (0.54s).
+[0m18:19:03.930657 [debug] [MainThread]: Command end result
+[0m18:19:03.979100 [debug] [MainThread]: Wrote artifact WritableManifest to N:\practice\lending_risk_analytics_2\target\manifest.json
+[0m18:19:03.986021 [debug] [MainThread]: Wrote artifact SemanticManifest to N:\practice\lending_risk_analytics_2\target\semantic_manifest.json
+[0m18:19:03.986021 [debug] [MainThread]: Wrote artifact OsiDocument to N:\practice\lending_risk_analytics_2\target\osi_document.json
+[0m18:19:04.005262 [debug] [MainThread]: Wrote artifact RunExecutionResult to N:\practice\lending_risk_analytics_2\target\run_results.json
+[0m18:19:04.005262 [info ] [MainThread]: 
+[0m18:19:04.005262 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:19:04.005262 [info ] [MainThread]: 
+[0m18:19:04.012291 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=7
+[0m18:19:04.015222 [debug] [MainThread]: Command `dbt test` succeeded at 18:19:04.014308 after 2.62 seconds
+[0m18:19:04.015222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291DDA8710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291DDB7510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291DDB7750>]}
+[0m18:19:04.017236 [debug] [MainThread]: Flushing usage events
+[0m18:19:04.696788 [debug] [MainThread]: An error was encountered while trying to flush usage events
