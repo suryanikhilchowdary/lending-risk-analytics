@@ -1,6 +1,5 @@
 # LendingClub Risk & Portfolio Analytics
-git add dashboard.png README.md, commit, push.
-
+![Dashboard](dashboard.png)
 End-to-end analytics-engineering project on ~9,600 LendingClub loans:
 raw CSV -> dbt models on DuckDB (tested) -> Power BI dashboard.
 
